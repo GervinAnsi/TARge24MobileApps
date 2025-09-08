@@ -11,7 +11,7 @@ namespace SciCalc
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
                 {
-                    fonts.AddFont("Cairo-light.ttf", "CairoLight");
+                    fonts.AddFont("Cairo-Light.ttf", "CairoLight");
                     fonts.AddFont("Cairo-ExtraLight.ttf", "CairoExtraLight");
                 });
 
