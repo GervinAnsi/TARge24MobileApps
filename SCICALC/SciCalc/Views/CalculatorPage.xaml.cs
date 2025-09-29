@@ -1,18 +1,13 @@
 using SciCalc.ViewModels;
 
+
 namespace SciCalc.Views;
-
-public partial class CalculatorPage : ContentView
+public partial class CalculatorPage : ContentPage
 {
-	public CalculatorPage()
-	{
-		InitializeComponent();
-
-		this.BindingContext = new CalculatorPageViewModel();
-	}
-
-    public static implicit operator Page(CalculatorPage v)
+    public CalculatorPage()
     {
-        throw new NotImplementedException();
+        InitializeComponent();
+
+        this.BindingContext = new CalculatorPageViewModel();
     }
 }

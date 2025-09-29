@@ -10,8 +10,7 @@ namespace SciCalc
     public partial class App : Application
     {
         const int WindowWidth = 1080;
-        const int WindowHeight = 1000;
-
+        const int WindowHeight = 1920;
 
         public App()
         {
@@ -33,6 +32,7 @@ namespace SciCalc
 
             MainPage = new CalculatorPage();
         }
+
 
         //protected override Window CreateWindow(IActivationState? activationState)
         //{

@@ -1,12 +1,14 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-
+//using Microsoft.Maui.Controls.Platform.Compatibility;
+// using Microsoft.AspNetCore.Components.Forms; - enne Compatibility abistas see allalaadimine
 
 namespace SciCalc.ViewModels
 {
     [INotifyPropertyChanged]
     internal partial class CalculatorPageViewModel //: ObservableObject
     {
+
         [ObservableProperty]
         private string inputText = string.Empty;
 
@@ -45,6 +47,7 @@ namespace SciCalc.ViewModels
 
                 CalculatedResult = result.ToString();
             }
+
             catch (Exception ex)
             {
                 CalculatedResult = "NaN";
@@ -55,7 +58,7 @@ namespace SciCalc.ViewModels
         {
             Dictionary<string, string> _opMapper = new()
             {
-                {"×", "*"},
+                {"x", "*"},
                 {"÷", "/"},
                 {"SIN", "Sin"},
                 {"COS", "Cos"},
@@ -68,7 +71,7 @@ namespace SciCalc.ViewModels
                 {"LOG10", "Log10"},
                 {"POW", "Pow"},
                 {"SQRT", "Sqrt"},
-                {"ABS", "Abs"},
+                {"ABS", "Abs"}
             };
 
             var retString = InputText;
@@ -104,8 +107,9 @@ namespace SciCalc.ViewModels
                 InputText += ")";
                 isSciOpWaiting = false;
             }
-            InputText += $" {op}";
+            InputText += $"{op}";
         }
+
 
         [RelayCommand]
         private void RegionOperator(string op)
@@ -115,8 +119,9 @@ namespace SciCalc.ViewModels
                 InputText += ")";
                 isSciOpWaiting = false;
             }
-            InputText += $" {op}";
+            InputText += $"{op}";
         }
+
 
         [RelayCommand]
         private void ScientificOperator(string op)
